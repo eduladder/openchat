@@ -6,7 +6,7 @@ if(isset($_GET['logout'])){
 
     //Simple exit message
     $fp = fopen("log.html", 'a');
-    fwrite($fp, "<div class='msgln'><i>User ".  $_SESSION['username'] ." has left the chat session.</i><br></div>");
+    fwrite($fp, "<div class='msgln'><i>User <a target='_blank' href='../viewuser/$_SESSION[user_id]/$_SESSION[username]'>".  $_SESSION['username'] ."</a> has left the chat session.</i><br></div>");
     fclose($fp);
     header("Location: ../index.php"); //Redirect the user
 }
