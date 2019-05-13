@@ -5,6 +5,7 @@ Firstly, you have to make sure that you create session in index.php file. By cod
 <?php
 // Starting session
 session_start();
+$_SESSION["username"] = "R";
 ?>
 
 Now you have to run this php code on your system(localhost).
