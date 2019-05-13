@@ -8,5 +8,6 @@ session_start();
 $_SESSION["username"] = "R";
 ?>
 
+You have to write the above session code on the line 3 of index.php.
 Now you have to run this php code on your system(localhost).
-Make sure that you delete the code of previous session because it is used for login on eduladder website.
+Make sure that you don't delete the code of previous session.
