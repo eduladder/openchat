@@ -13,7 +13,7 @@ if(isset($_SESSION['username'])){
 
 
     $fp = fopen("log.html", 'a');
-    fwrite($fp, $solved_time."<a target='_blank' href='../viewuser/$_SESSION[user_id]/$_SESSION[username]'><div class='msgln'> <b>".$_SESSION['username']."</b>:</a>".stripslashes(htmlspecialchars($text))."<br></div>");
+    fwrite($fp,"(". $solved_time.")<a target='_blank' href='../viewuser/$_SESSION[user_id]/$_SESSION[username]'><div class='msgln'> <b>".$_SESSION['username']."</b>:</a>".stripslashes(htmlspecialchars($text))."<br></div>");
     fclose($fp);
 }
 ?>

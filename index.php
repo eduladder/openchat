@@ -65,9 +65,11 @@ $(document).ready(function(){
 //If user submits the form
 	$("#submitmsg").click(function(){
 		var clientmsg = $("#usermsg").val();
+		if (clientmsg!="") {
 		var clientOffset = -(new Date().getTimezoneOffset()*60);
 		$.post("post.php", {text: clientmsg , localOffset : clientOffset });
 		$("#usermsg").attr("value", "");
+		}	
 		return false;
 	});
 function loadLog(){
