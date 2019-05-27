@@ -3,13 +3,13 @@ session_start();
 if(isset($_SESSION['username'])){
     echo $text = $_POST['text'];
     $localOffset = $_POST['localOffset'];
-    
+
 	$serverOffset = date('Z');
 
 
 	$now = time();
 	$offset = $now+ $localOffset - $serverOffset;
-	$solved_time =date('d-m-y h:i A',$offset);
+	$solved_time =date('h:i A',$offset);
 
 
     $fp = fopen("log.html", 'a');
