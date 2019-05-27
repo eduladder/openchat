@@ -2,9 +2,18 @@
 session_start();
 if(isset($_SESSION['username'])){
     echo $text = $_POST['text'];
+    $localOffset = $_POST['localOffset'];
+    
+	$serverOffset = date('Z');
+
+
+	$now = time();
+	$offset = $now+ $localOffset - $serverOffset;
+	$solved_time =date('d-m-y h:i A',$offset);
+
+
     $fp = fopen("log.html", 'a');
-    date_default_timezone_set('Asia/Calcutta');
-    fwrite($fp, date("h:i A")."<a target='_blank' href='../viewuser/$_SESSION[user_id]/$_SESSION[username]'><div class='msgln'> <b>".$_SESSION['username']."</b>:</a>".stripslashes(htmlspecialchars($text))."<br></div>");
+    fwrite($fp, $solved_time."<a target='_blank' href='../viewuser/$_SESSION[user_id]/$_SESSION[username]'><div class='msgln'> <b>".$_SESSION['username']."</b>:</a>".stripslashes(htmlspecialchars($text))."<br></div>");
     fclose($fp);
 }
 ?>
