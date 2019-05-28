@@ -36,7 +36,6 @@ if(isset($_SESSION['username'])){
       $handle = fopen("log.html", "r");
       $contents = fread($handle, filesize("log.html"));
       fclose($handle);
-
       echo $contents;
   }
   ?>
