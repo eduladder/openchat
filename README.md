@@ -11,3 +11,6 @@ $_SESSION["username"] = "R";
 You have to write the above session code on the line 3 of index.php.
 Now you have to run this php code on your system(localhost).
 Make sure that you don't delete the code of previous session.
+
+You could access the live over here.
+https://eduladder.com/edchat/
