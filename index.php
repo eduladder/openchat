@@ -2,6 +2,8 @@
 session_start();
 error_reporting(E_ALL);
 
+require_once'include/header.php';
+
 if(isset($_GET['logout'])){
 
     //Simple exit message
